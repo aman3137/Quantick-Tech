@@ -219,6 +219,14 @@ nav .container {
   align-items: center;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-main);
+  transition: var(--transition);
+}
+
 .nav-links a {
   font-weight: 600;
   font-size: 0.95rem;
@@ -411,12 +419,6 @@ nav .container {
   align-items: center;
 }
 
-@media (max-width: 992px) {
-  .split-section {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-}
 
 .terminal {
   background: var(--white);
@@ -1117,14 +1119,142 @@ footer {
   50% { transform: translateY(-15px) rotate(5deg); }
 }
 
-/* Responsive */
+/* Responsive Enhancements */
 @media (max-width: 992px) {
-  .split-section, .core-services-grid, .steps-container, .contact-wrapper, .footer-grid {
+  .section-padding {
+    padding: 80px 0;
+  }
+
+  .split-section, 
+  .core-services-grid, 
+  .steps-container, 
+  .contact-wrapper, 
+  .footer-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
   
   .hero-btns {
     flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .animated-headline {
+    flex-direction: column;
+    gap: 0;
+    line-height: 1.2;
+  }
+
+  .word {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: var(--white);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 2500;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    margin: 1.5rem 0;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .terminal {
+    min-height: 300px;
+  }
+
+  .service-card-lg {
+    padding: 3rem 2rem;
+  }
+
+  .contact-form {
+    padding: 2rem;
+  }
+
+  .footer-grid {
+    text-align: center;
+  }
+
+  .footer-info p {
+    margin: 0 auto 1.5rem;
+  }
+
+  .footer-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .robo-assistant {
+    display: none; /* Hide roaming robo on small mobile for better UX */
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .service-tag {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
   }
 }
