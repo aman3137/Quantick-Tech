@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantick Tech | Automate. Build. Scale.</title>
+    <meta name="description"
+        content="Quantick Tech provides premium marketing automation, web development, and website management solutions for scaling businesses.">
+    
+    <!-- Google Fonts: Poppins & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Mouse Glow Effect -->
+    <div id="mouse-glow" class="mouse-glow"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                Quantick<span class="text-orange">Tech</span>
+                <span class="check"><i data-lucide="check-circle-2"></i></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">Who We Are</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="btn btn-primary">Book a Call</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Background Blobs -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content reveal">
+                <h1 class="animated-headline">
+                    <span class="word">Automate.</span> 
+                    <span class="word">Build.</span> 
+                    <span class="word accent-glow">Scale.</span>
+                </h1>
+                <p>Smart automation + powerful web solutions designed for high-performance businesses looking to dominate their market.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                    <a href="#services" class="btn btn-secondary">Our Solutions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are (Terminal) -->
+    <section id="about" class="who-we-are section-padding">
+        <div class="container">
+            <div class="split-section">
+                <div class="text-content reveal">
+                    <h2 class="section-title">Innovation Driven. <span class="text-orange">Automation First.</span></h2>
+                    <p style="margin: 1.5rem 0; font-size: 1.1rem; color: #555;">We build systems that don't just
+                        work—they scale. Quantick Tech was founded on the principle that technology should be an
+                        accelerator, not a bottleneck.</p>
+                    <ul style="margin-top: 2rem;">
+                        <li style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <i data-lucide="zap" class="text-orange"></i>
+                            <span><strong>Built for Scalability:</strong> Our solutions grow with your business.</span>
+                        </li>
+                        <li style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <i data-lucide="target" class="text-orange"></i>
+                            <span><strong>Conversion Focused:</strong> Every pixel serves a purpose.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="terminal-container reveal">
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <div class="dot red"></div>
+                            <div class="dot orange"></div>
+                            <div class="dot green"></div>
+                        </div>
+                        <div class="terminal-body" id="terminal-content">
+                            <!-- Typing animation content here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Moving Services Track inside Coding Box -->
+    <section class="moving-services section-padding" style="background: var(--bg-cream);">
+        <div class="container">
+            <div class="terminal-window reveal">
+                <div class="terminal-header">
+                    <div class="dot red"></div>
+                    <div class="dot orange"></div>
+                    <div class="dot green"></div>
+                    <span class="terminal-title">services_stream.log</span>
+                </div>
+                <div class="scroll-track">
+                    <div class="scroll-items">
+                        <span class="service-tag">Marketing Automation</span>
+                        <span class="service-tag">Web Development</span>
+                        <span class="service-tag">Website Management</span>
+                        <span class="service-tag">CRM Integration</span>
+                        <span class="service-tag">Email Automation</span>
+                        <span class="service-tag">WhatsApp Automation</span>
+                        <span class="service-tag">Optimization</span>
+                        <!-- Duplicate for loop -->
+                        <span class="service-tag">Marketing Automation</span>
+                        <span class="service-tag">Web Development</span>
+                        <span class="service-tag">Website Management</span>
+                        <span class="service-tag">CRM Integration</span>
+                        <span class="service-tag">Email Automation</span>
+                        <span class="service-tag">WhatsApp Automation</span>
+                        <span class="service-tag">Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;" class="reveal">
+                <h2>Our Core <span class="text-orange">Services</span></h2>
+                <p>Tailored solutions for the modern digital era.</p>
+            </div>
+            <div class="core-services-grid">
+                <div class="service-card-lg reveal">
+                    <i data-lucide="cpu"></i>
+                    <h3>Marketing Automation</h3>
+                    <p>Streamline your lead generation and nurturing with smart workflows that work while you sleep.</p>
+                </div>
+                <div class="service-card-lg reveal">
+                    <i data-lucide="layout"></i>
+                    <h3>Web Development</h3>
+                    <p>Custom, high-performance websites built with the latest technologies for speed and SEO.</p>
+                </div>
+                <div class="service-card-lg reveal">
+                    <i data-lucide="settings"></i>
+                    <h3>Website Handling</h3>
+                    <p>End-to-end management, updates, and optimization so you can focus on your core business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="section-padding">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;" class="reveal">
+                <h2>The <span class="text-orange">Quantick</span> Process</h2>
+                <p style="color: #888;">Simple, efficient, and results-driven.</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-card reveal">
+                    <div class="step-number">1</div>
+                    <h3>Understand</h3>
+                    <p style="color: #aaa; margin-top: 1rem;">We dive deep into your business model and goals.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">2</div>
+                    <h3>Build & Automate</h3>
+                    <p style="color: #aaa; margin-top: 1rem;">Our team develops and implements your custom system.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">3</div>
+                    <h3>Scale</h3>
+                    <p style="color: #aaa; margin-top: 1rem;">Monitor, optimize, and watch your business grow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="section-padding">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;" class="reveal">
+                <h2>Portfolio <span class="text-orange">Grid</span></h2>
+                <p>A showcase of website projects and automation systems.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item reveal">
+                    <img src="assets/portfolio-1.png" alt="Marketing Automation Dashboard">
+                    <div class="portfolio-overlay">
+                        <h3>SaaS Dashboard</h3>
+                        <p>Marketing Automation</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal">
+                    <img src="assets/portfolio-2.png" alt="Web Development Showcase">
+                    <div class="portfolio-overlay">
+                        <h3>Finance Platform</h3>
+                        <p>Web Development</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal">
+                    <img src="assets/portfolio-3.png" alt="Website Management Systems">
+                    <div class="portfolio-overlay">
+                        <h3>E-commerce Flow</h3>
+                        <p>Automation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <section id="contact" class="section-padding" style="background: #fdfdfd;">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info reveal">
+                    <h2>Let's Build Something <span class="text-orange">Great.</span></h2>
+                    <p>Ready to automate and scale? Reach out today for a free consultation.</p>
+                    <div class="contact-method">
+                        <i data-lucide="mail"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <a href="mailto:hello@quanticktech.com">hello@quanticktech.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <i data-lucide="phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form reveal">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Work Email</label>
+                        <input type="email" placeholder="john@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Service Interested In</label>
+                        <input type="text" placeholder="Marketing Automation">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="Tell us about your project"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo logo">
+                        Quantick<span class="text-orange">Tech</span>
+                    </div>
+                    <p style="color: #888; max-width: 300px;">Providing state-of-the-art automation and web solutions
+                        for forward-thinking companies.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Quantick Tech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Roaming Robo Assistant -->
+    <div class="robo-assistant" id="robo-assistant">
+        <div class="robo-bubble" id="robo-bubble">Hello! I'm Quantick Bot.</div>
+        <div class="robo-icon">
+            <i data-lucide="bot"></i>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float">
+        <i data-lucide="message-circle"></i>
+    </a>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
