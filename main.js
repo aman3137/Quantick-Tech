@@ -223,9 +223,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     contactForm.innerHTML = `
                         <div class="success-message reveal active" style="text-align: center; padding: 2rem;">
                             <i data-lucide="check-circle" style="color: var(--primary); width: 60px; height: 60px; margin-bottom: 1rem;"></i>
-                            <h3>Message Sent!</h3>
-                            <p>Thank you for reaching out. We'll get back to you at ${formData.get('email')} soon.</p>
-                            <p style="font-size: 0.8rem; color: #888; margin-top: 1rem;">Note: If this is your first time, please check your inbox to verify the form.</p>
+                            <h3>Message Received!</h3>
+                            <p>Thank you for reaching out. We've sent a confirmation to ${formData.get('email')}.</p>
+                            <p style="font-size: 0.8rem; color: #888; margin-top: 1rem; border-top: 1px solid #eee; pt-3;">
+                                <strong>Important:</strong> If this is your first time using this form, please check your inbox (**quanticktech@zohomail.in**) and click the activation link to start receiving messages.
+                            </p>
                         </div>
                     `;
                     lucide.createIcons();
