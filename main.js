@@ -1,13 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Navbar Scroll Effect
-    const navbar = document.getElementById('navbar');
+    // Navbar Scroll Effect (Optimized)
+    let scrollTicking = false;
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+        if (!scrollTicking) {
+            window.requestAnimationFrame(() => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                scrollTicking = false;
+            });
+            scrollTicking = true;
         }
-    });
+    }, { passive: true });
 
     // Mobile Menu Toggle
     const menuToggle = document.getElementById('mobile-menu');
@@ -48,25 +55,39 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach(el => revealObserver.observe(el));
 
     // Mouse Glow Tracking
-    const mouseGlow = document.getElementById('mouse-glow');
+    // Mouse Glow Tracking (Optimized)
+    let mouseTicking = false;
     window.addEventListener('mousemove', (e) => {
-        if (mouseGlow) {
-            mouseGlow.style.left = `${e.clientX}px`;
-            mouseGlow.style.top = `${e.clientY}px`;
+        if (!mouseTicking) {
+            window.requestAnimationFrame(() => {
+                if (mouseGlow) {
+                    mouseGlow.style.left = `${e.clientX}px`;
+                    mouseGlow.style.top = `${e.clientY}px`;
+                }
+                mouseTicking = false;
+            });
+            mouseTicking = true;
         }
-    });
+    }, { passive: true });
 
-    // Hero Parallax Effect
+    // Hero Parallax Effect (Optimized)
     const hero = document.getElementById('hero');
     const meshBg = document.querySelector('.mesh-bg');
+    let parallaxTicking = false;
     if (hero) {
         hero.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth - 0.5) * 30;
-            const y = (e.clientY / window.innerHeight - 0.5) * 30;
-            if (meshBg) {
-                meshBg.style.transform = `translate(${x}px, ${y}px)`;
+            if (!parallaxTicking) {
+                window.requestAnimationFrame(() => {
+                    const x = (e.clientX / window.innerWidth - 0.5) * 30;
+                    const y = (e.clientY / window.innerHeight - 0.5) * 30;
+                    if (meshBg) {
+                        meshBg.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+                    }
+                    parallaxTicking = false;
+                });
+                parallaxTicking = true;
             }
-        });
+        }, { passive: true });
     }
 
     // Lightweight Particle System

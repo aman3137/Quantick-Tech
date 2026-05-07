@@ -145,7 +145,8 @@ img {
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.8s ease-out;
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
 }
 
 .reveal.active {
@@ -208,6 +209,8 @@ nav {
   padding: 1.5rem 0;
   z-index: 2000;
   transition: all 0.4s ease;
+  transform: translateZ(0); /* Force Hardware Acceleration */
+  backface-visibility: hidden;
 }
 
 nav.scrolled {
@@ -299,6 +302,7 @@ nav .container {
   z-index: -1;
   overflow: hidden;
   pointer-events: none;
+  transform: translateZ(0);
 }
 
 .blob {
@@ -308,6 +312,7 @@ nav .container {
   opacity: 0.15;
   background: var(--primary);
   animation: blobFloat 25s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 .blob-1 { width: 600px; height: 600px; top: -10%; left: -10%; }
@@ -1306,4 +1311,23 @@ footer {
     font-size: 1.5rem;
     letter-spacing: 2px;
   }
+}
+/* Performance Boosters */
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 500px;
+}
+
+#hero {
+  content-visibility: visible;
+}
+
+.logo-img, .robo-icon, .service-card-lg, .portfolio-item {
+  will-change: transform;
+}
+
+/* Optimize Noise */
+body::before {
+  will-change: transform;
+  transform: translateZ(0);
 }

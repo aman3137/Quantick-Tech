@@ -11,7 +11,8 @@
     <!-- Google Fonts: Poppins & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"></noscript>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
@@ -26,7 +27,7 @@
     <nav id="navbar">
         <div class="container">
             <a href="#" class="logo">
-                <img src="assets/quantick-logo.webp" alt="Quantick Tech Logo" class="logo-img">
+                <img src="assets/quantick-logo.webp" alt="Quantick Tech Logo" class="logo-img" fetchpriority="high" width="150" height="38">
             </a>
             <div class="menu-toggle" id="mobile-menu">
                 <i data-lucide="menu"></i>
@@ -197,21 +198,21 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item reveal">
-                    <img src="assets/portfolio-1.png" alt="Marketing Automation Dashboard">
+                    <img src="assets/portfolio-1.webp" alt="Marketing Automation Dashboard" loading="lazy" decoding="async" width="400" height="250">
                     <div class="portfolio-overlay">
                         <h3>SaaS Dashboard</h3>
                         <p>Marketing Automation</p>
                     </div>
                 </div>
                 <div class="portfolio-item reveal">
-                    <img src="assets/portfolio-2.png" alt="Web Development Showcase">
+                    <img src="assets/portfolio-2.webp" alt="Web Development Showcase" loading="lazy" decoding="async" width="400" height="250">
                     <div class="portfolio-overlay">
                         <h3>Finance Platform</h3>
                         <p>Web Development</p>
                     </div>
                 </div>
                 <div class="portfolio-item reveal">
-                    <img src="assets/portfolio-3.png" alt="Website Management Systems">
+                    <img src="assets/portfolio-3.webp" alt="Website Management Systems" loading="lazy" decoding="async" width="400" height="250">
                     <div class="portfolio-overlay">
                         <h3>E-commerce Flow</h3>
                         <p>Automation</p>
