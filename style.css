@@ -208,9 +208,33 @@ nav .container {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.logo-img {
+  height: 38px; /* Optimized height for a sleek header */
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.08);
+}
+
+.footer-logo-img {
+  height: 34px;
+  filter: grayscale(1) brightness(0.8) contrast(1.2); /* Subtle footer look */
+  opacity: 0.6;
+  transition: var(--transition);
+}
+
+.footer-logo:hover .footer-logo-img {
+  filter: grayscale(0) brightness(1);
+  opacity: 1;
 }
 
 .nav-links {
@@ -225,6 +249,15 @@ nav .container {
   cursor: pointer;
   color: var(--text-main);
   transition: var(--transition);
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .nav-links a {
@@ -970,15 +1003,14 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 4rem;
   margin-bottom: 4rem;
 }
 
 .footer-logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--text-main);
+  display: flex;
+  align-items: center;
   margin-bottom: 1.5rem;
 }
 

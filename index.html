@@ -15,6 +15,7 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 
 <body>
@@ -25,8 +26,7 @@
     <nav id="navbar">
         <div class="container">
             <a href="#" class="logo">
-                Quantick<span class="text-orange">Tech</span>
-                <span class="check"><i data-lucide="check-circle-2"></i></span>
+                <img src="assets/quantick-logo.webp" alt="Quantick Tech Logo" class="logo-img">
             </a>
             <div class="menu-toggle" id="mobile-menu">
                 <i data-lucide="menu"></i>
@@ -232,7 +232,7 @@
                         <i data-lucide="mail"></i>
                         <div>
                             <h4>Email Us</h4>
-                            <a href="mailto:hello@quanticktech.com">hello@quanticktech.com</a>
+                            <a href="mailto:quanticktech@zohomail.in">quanticktech@zohomail.in</a>
                         </div>
                     </div>
                     <div class="contact-method">
@@ -248,22 +248,24 @@
                         <a href="#"><i data-lucide="instagram"></i></a>
                     </div>
                 </div>
-                <form class="contact-form reveal">
+                <form class="contact-form reveal" action="https://formspree.io/f/mqakevqk" method="POST">
+                    <input type="hidden" name="_subject" value="New Lead from Quantick Tech Website">
+                    <input type="text" name="_gotcha" style="display:none">
                     <div class="form-group">
                         <label>Your Name</label>
-                        <input type="text" placeholder="John Doe" required>
+                        <input type="text" name="name" placeholder="John Doe" required>
                     </div>
                     <div class="form-group">
                         <label>Work Email</label>
-                        <input type="email" placeholder="john@company.com" required>
+                        <input type="email" name="email" placeholder="john@company.com" required>
                     </div>
                     <div class="form-group">
                         <label>Service Interested In</label>
-                        <input type="text" placeholder="Marketing Automation">
+                        <input type="text" name="service" placeholder="Marketing Automation">
                     </div>
                     <div class="form-group">
                         <label>Message</label>
-                        <textarea rows="4" placeholder="Tell us about your project"></textarea>
+                        <textarea name="message" rows="4" placeholder="Tell us about your project"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                 </form>
@@ -277,7 +279,7 @@
             <div class="footer-grid">
                 <div class="footer-info">
                     <div class="footer-logo logo">
-                        Quantick<span class="text-orange">Tech</span>
+                        <img src="assets/quantick-logo.webp" alt="Quantick Tech Logo" class="logo-img footer-logo-img">
                     </div>
                     <p style="color: #888; max-width: 300px;">Providing state-of-the-art automation and web solutions
                         for forward-thinking companies.</p>
@@ -297,9 +299,16 @@
                         <li><a href="#">Terms of Service</a></li>
                     </ul>
                 </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:quanticktech@zohomail.in">quanticktech@zohomail.in</a></li>
+                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Quantick Tech. All rights reserved.</p>
+                <p>&copy; 2026 Quantick Tech. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -197,6 +197,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const terminalElement = document.querySelector('.terminal');
     if (terminalElement) terminalObserver.observe(terminalElement);
 
+    // Contact Form Submission Handler
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i data-lucide="loader-2" class="spin"></i> Sending...';
+            lucide.createIcons();
+
+            const formData = new FormData(contactForm);
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    contactForm.innerHTML = `
+                        <div class="success-message reveal active" style="text-align: center; padding: 2rem;">
+                            <i data-lucide="check-circle" style="color: var(--primary); width: 60px; height: 60px; margin-bottom: 1rem;"></i>
+                            <h3>Message Sent!</h3>
+                            <p>Thank you for reaching out. We'll get back to you at ${formData.get('email')} soon.</p>
+                            <p style="font-size: 0.8rem; color: #888; margin-top: 1rem;">Note: If this is your first time, please check your inbox to verify the form.</p>
+                        </div>
+                    `;
+                    lucide.createIcons();
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (error) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+                alert('Oops! There was a problem sending your message. Please try again or email us directly.');
+            }
+        });
+    }
+
     // Smooth Scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
