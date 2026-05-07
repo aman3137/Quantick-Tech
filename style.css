@@ -112,18 +112,20 @@ img {
 }
 
 .btn-bright {
-  background: linear-gradient(135deg, #4CAF50 0%, #81C784 100%) !important;
+  background: linear-gradient(135deg, #00C853 0%, #B2FF59 100%) !important;
   color: #000 !important;
-  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
-  font-weight: 700 !important;
-  letter-spacing: 0.5px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 200, 83, 0.4);
+  font-weight: 800 !important;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  border: none;
 }
 
 .btn-bright:hover {
-  background: linear-gradient(135deg, #81C784 0%, #4CAF50 100%) !important;
-  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.6) !important;
-  transform: translateY(-2px) scale(1.05) !important;
+  background: linear-gradient(135deg, #B2FF59 0%, #00C853 100%) !important;
+  box-shadow: 0 0 35px rgba(0, 200, 83, 0.7) !important;
+  transform: translateY(-3px) scale(1.08) !important;
 }
 
 #how-it-works {
