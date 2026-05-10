@@ -613,14 +613,14 @@ nav .container {
 .robo-icon {
   background: var(--primary);
   color: #000;
-  width: 60px;
-  height: 60px;
-  border-radius: 12px; /* Square technical look */
+  width: 40px;
+  height: 40px;
+  border-radius: 8px; /* Slightly smaller radius for smaller size */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
-  box-shadow: 0 0 20px var(--primary);
+  font-size: 1.2rem;
+  box-shadow: 0 0 15px var(--primary);
   animation: roboFloat 4s ease-in-out infinite;
   pointer-events: auto;
 }
@@ -630,13 +630,15 @@ nav .container {
   backdrop-filter: blur(10px);
   color: var(--secondary);
   border: 1px solid rgba(0,0,0,0.1);
-  padding: 12px 20px;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
   font-family: 'Fira Code', monospace;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
+
+/* Duplicate robo styles removed */
 
 /* Who We Are - Terminal */
 .who-we-are {
@@ -1129,38 +1131,62 @@ footer {
 }
 
 .robo-icon {
-  background: var(--primary);
-  color: var(--white);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
-  box-shadow: 0 10px 30px var(--shadow-green);
   animation: roboFloat 4s ease-in-out infinite;
   pointer-events: auto;
   cursor: pointer;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.robo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .robo-bubble {
   background: var(--white);
-  padding: 12px 20px;
+  padding: 8px 12px;
   border-radius: 20px;
-  border-bottom-left-radius: 0;
-  margin-bottom: 15px;
-  font-size: 0.9rem;
+  border: 2px solid #1A1A1A; /* Thick border like the image */
+  margin-bottom: 25px; /* Space for dots */
+  font-size: 0.65rem;
   font-weight: 700;
-  box-shadow: var(--shadow-soft);
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.5s ease;
-  max-width: 250px;
+  max-width: 150px;
   text-align: center;
   position: relative;
   color: var(--text-main);
-  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.robo-bubble::before,
+.robo-bubble::after {
+  content: '';
+  position: absolute;
+  background: var(--white);
+  border-radius: 50%;
+  border: 2px solid #1A1A1A; /* Thick border */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.robo-bubble::before {
+  width: 8px;
+  height: 8px;
+  bottom: -12px;
+}
+
+.robo-bubble::after {
+  width: 5px;
+  height: 5px;
+  bottom: -20px;
 }
 
 .robo-bubble.active {
